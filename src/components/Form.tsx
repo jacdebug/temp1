@@ -1,17 +1,31 @@
 import * as React from 'react';
 
 export interface Props {
-    name: string;
-    enthusiasmLevel?: number;
-    onIncrement?: () => void;
-    onDecrement?: () => void;
+ //   name: string;
+  //  enthusiasmLevel?: number;
+   // onIncrement?: () => void;
+   // onDecrement?: () => void;
   }
 
 
-class Form extends React.Component<Props, object> {
-    render() {
+
+//name, enthusiasmLevel = 1, onIncrement, onDecrement
+  function Form({  }: Props) {
+    //if (enthusiasmLevel <= 0) {
+     // throw new Error('You could be a little more enthusiastic. :D');
+    //}
   
-      return (
+    return (
+      <div className="hello">
+        <div className="greeting">
+          Hello {name}
+        </div>
+        <div>
+          <button >-</button>
+          <button >+</button>
+        </div>
+
+
         <form id="contactForm">
 
             <div>
@@ -25,7 +39,7 @@ class Form extends React.Component<Props, object> {
             </div>
 
             <div>
-                <label htmlFor="msg">Name:</label>
+                <label htmlFor="msg">Message:</label>
                 <textarea id="msg"></textarea>
             </div>
 
@@ -35,22 +49,28 @@ class Form extends React.Component<Props, object> {
             </div>
 
         </form>
+
+
+      </div>
+    );
+  }
+  
+export default Form;
+
+
+/*
+class Form extends React.Component<Props, object> {
+    render() {
+  
+      return (
+       
       );
     }
   }
 
-/*
 
 
-function Form({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
 
-    if (enthusiasmLevel <= 0) {
-        throw new Error('You could be a little more enthusiastic. :D');
-    }
 
-    return (
-        
-    );
-}
-*/
-export default Form;
+
+        */

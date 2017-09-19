@@ -10,8 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 const store = createStore<StoreState>(enthusiasm, {
-  enthusiasmLevel: 1,
-  languageName: 'TypeScript',
+  contactdata: []
 });
 
 ReactDOM.render(

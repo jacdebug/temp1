@@ -1,4 +1,9 @@
+interface ContactInfo {
+    name: string;
+    email: string;
+    message: string;
+}
+
 export interface StoreState {
-    languageName: string;
-    enthusiasmLevel: number;
+    contactdata: Array<ContactInfo>;
 }
